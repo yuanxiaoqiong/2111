@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>购物车66</title>
+  <link rel="stylesheet" href="css/cart.css" />  <!-- 引入购物车的css -->
+  <script src="../axios.js"></script>  <!-- 购物车的js里需要用ajax去获取商品页面在local里保存的数据 -->
+</head>
+
+<body>
+  <table id="cartTable">
+    <thead>
+      <tr>
+        <th>
+          <label>
+            <input class="check-all check" type="checkbox" />&nbsp;全选</label>
+        </th>
+        <th>商品</th>
+        <th>单价</th>
+        <th>数量</th>
+        <th>小计</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+  
+
+    </tbody>
+  </table>
+
+  <div class="foot" id="foot">
+    <label class="fl select-all">
+      <input type="checkbox" class="check-all check" />&nbsp;全选</label>
+    <a class="fl delete" id="deleteAll" href="javascript:;">删除</a>
+    <div class="fr closing">结 算</div>
+    <div class="fr total">合计：￥
+      <span id="priceTotal">0.00</span>
+    </div>
+    <div class="fr selected" id="selected">已选商品
+      <span id="selectedTotal">0</span>件
+      <span class="arrow up">︽</span>
+      <span class="arrow down">︾</span>
+    </div>
+    <div class="selected-view">
+      <div id="selectedViewList" class="clearfix">
+        <!--<div><img src="images/1.jpg"><span>取消选择</span></div>-->
+      </div>
+      <span class="arrow">◆
+        <span>◆</span>
+      </span>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/cart.js"></script> <!-- 购物车操作节点的js,必须在加载完所有页面节点后引入 把购物车数据渲染到页面并实现各种点击功能-->
+</body>
+
+</html>
+
+<!-- 注意,要用vscode的虚拟服务器打开页面 -->
